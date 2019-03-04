@@ -12,8 +12,8 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                        connectionURL="jdbc:mysql://39.107.250.149:3306/AnimalBracelet" userId="root"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://39.107.250.149:3306/AnimalBracelet" userId="Alex"
                         password="7894561230"/>
 
         <javaModelGenerator targetPackage="neau.cekong.pojo"
@@ -22,7 +22,7 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="neau.cekong.pojo.xml"
+        <sqlMapGenerator targetPackage="neau.cekong.mapper"
                          targetProject="E:\Program Files\TeamProgramTools\Git\Repositories\AnimalBracelet\AnimalBracelet\BackData\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
@@ -37,7 +37,7 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>-->
 
-        <table tableName="table_bushu" domainObjectName="FeeBase"
+        <table tableName="table_bushu" domainObjectName="TableBushu"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
@@ -45,13 +45,13 @@
                                 replaceString=""/>-->
         </table>
         
-        <table tableName="table_wendu" domainObjectName="FeeBase"
+        <table tableName="table_wendu" domainObjectName="TableWendu"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
         </table>
         
-        <table tableName="table_zishi" domainObjectName="FeeBase"
+        <table tableName="table_zishi" domainObjectName="TableZishi"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

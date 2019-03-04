@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="neau.cekong.mapper.TableZishiMapper" >
+  <resultMap id="BaseResultMap" type="neau.cekong.pojo.TableZishi" >
+    <id column="Id" property="id" jdbcType="BIGINT" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="zhan" property="zhan" jdbcType="DOUBLE" />
+    <result column="product_id" property="productId" jdbcType="BIGINT" />
+    <result column="ce" property="ce" jdbcType="DOUBLE" />
+    <result column="tang" property="tang" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Id, time, zhan, product_id, ce, tang
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from table_zishi
+    where Id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from table_zishi
+    where Id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="neau.cekong.pojo.TableZishi" >
+    insert into table_zishi (Id, time, zhan, 
+      product_id, ce, tang)
+    values (#{id,jdbcType=BIGINT}, #{time,jdbcType=TIMESTAMP}, #{zhan,jdbcType=DOUBLE}, 
+      #{productId,jdbcType=BIGINT}, #{ce,jdbcType=DOUBLE}, #{tang,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="neau.cekong.pojo.TableZishi" >
+    insert into table_zishi
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        Id,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="zhan != null" >
+        zhan,
+      </if>
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="ce != null" >
+        ce,
+      </if>
+      <if test="tang != null" >
+        tang,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhan != null" >
+        #{zhan,jdbcType=DOUBLE},
+      </if>
+      <if test="productId != null" >
+        #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="ce != null" >
+        #{ce,jdbcType=DOUBLE},
+      </if>
+      <if test="tang != null" >
+        #{tang,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="neau.cekong.pojo.TableZishi" >
+    update table_zishi
+    <set >
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhan != null" >
+        zhan = #{zhan,jdbcType=DOUBLE},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="ce != null" >
+        ce = #{ce,jdbcType=DOUBLE},
+      </if>
+      <if test="tang != null" >
+        tang = #{tang,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="neau.cekong.pojo.TableZishi" >
+    update table_zishi
+    set time = #{time,jdbcType=TIMESTAMP},
+      zhan = #{zhan,jdbcType=DOUBLE},
+      product_id = #{productId,jdbcType=BIGINT},
+      ce = #{ce,jdbcType=DOUBLE},
+      tang = #{tang,jdbcType=DOUBLE}
+    where Id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

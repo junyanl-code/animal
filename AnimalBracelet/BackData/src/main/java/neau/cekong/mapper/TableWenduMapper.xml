@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="neau.cekong.mapper.TableWenduMapper" >
+  <resultMap id="BaseResultMap" type="neau.cekong.pojo.TableWendu" >
+    <id column="Id" property="id" jdbcType="INTEGER" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="wendu" property="wendu" jdbcType="DOUBLE" />
+    <result column="product_id" property="productId" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Id, time, wendu, product_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from table_wendu
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from table_wendu
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="neau.cekong.pojo.TableWendu" >
+    insert into table_wendu (Id, time, wendu, 
+      product_id)
+    values (#{id,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, #{wendu,jdbcType=DOUBLE}, 
+      #{productId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="neau.cekong.pojo.TableWendu" >
+    insert into table_wendu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        Id,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="wendu != null" >
+        wendu,
+      </if>
+      <if test="productId != null" >
+        product_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wendu != null" >
+        #{wendu,jdbcType=DOUBLE},
+      </if>
+      <if test="productId != null" >
+        #{productId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="neau.cekong.pojo.TableWendu" >
+    update table_wendu
+    <set >
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wendu != null" >
+        wendu = #{wendu,jdbcType=DOUBLE},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="neau.cekong.pojo.TableWendu" >
+    update table_wendu
+    set time = #{time,jdbcType=TIMESTAMP},
+      wendu = #{wendu,jdbcType=DOUBLE},
+      product_id = #{productId,jdbcType=BIGINT}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
