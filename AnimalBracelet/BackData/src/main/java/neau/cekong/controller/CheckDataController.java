@@ -4,23 +4,33 @@ import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import neau.cekong.pojo.TopBushu;
+import neau.cekong.pojo.TopZishi;
 import neau.cekong.service.GetTopBushuByDidService;
+import neau.cekong.service.GetTopZishiByDidService;
 
 @Controller
 public class CheckDataController {
 	@Resource
 	private GetTopBushuByDidService getTopBushuByDidServiceImpl;
-	
+	@Resource
+	private GetTopZishiByDidService getTopZishiByDidServiceImpl;
+
 	@RequestMapping("bushu")
 	@ResponseBody
-	@CrossOrigin
-	public  TopBushu defaultWay(Long product_id, int limit) {
+	public TopBushu defaultWay(Long product_id, int limit) {
 		Logger.getLogger(this.getClass()).info("前几条 bushu 查询");
 		return getTopBushuByDidServiceImpl.getTopBushuByDid(limit, product_id);
 	}
+
+	@RequestMapping("zishi")
+	@ResponseBody
+	public TopZishi zishi(Long product_id, int limit) {
+		Logger.getLogger(this.getClass()).info("前几条 zishi 查询");
+		return getTopZishiByDidServiceImpl.getTopZishiByDid(limit, product_id);
+	}
+
 }

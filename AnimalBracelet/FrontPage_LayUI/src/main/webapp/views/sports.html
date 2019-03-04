@@ -93,12 +93,18 @@
 						type: 'POST',
 						data: {
 							"product_id": 1,
-							"limit" : 15
+							"limit": 15
 						},
+						headers:{"Access-Control-Allow-Origin":"*"},
 						async: true, // 异步刷新
 						datatype: "json",
 						success: function(data) {
-							data = JSON.parse(data); // 将json转换为对象
+							try {
+								data = JSON.parse(data); // 将json转换为对象
+							} catch(e) {
+								//TODO handle the exception	
+							}
+							
 							/*
 							                    if(flag)// 否则使用初始化option
 							                        option = myChart.getOption();// 读取当前状态 
@@ -114,12 +120,12 @@
 							// 填入数据
 							myChart.setOption({
 								xAxis: {
-									data: data.categories
+									data: data.categories.reverse()
 								},
 								series: [{
 									// 根据名字对应到相应的系列
 									name: '步数',
-									data: data.data
+									data: data.data.reverse()
 								}]
 							});
 						},

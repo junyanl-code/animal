@@ -1,5 +1,10 @@
 package neau.cekong.mapper;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
+
+import neau.cekong.pojo.TableBushu;
 import neau.cekong.pojo.TableZishi;
 
 public interface TableZishiMapper {
@@ -14,4 +19,7 @@ public interface TableZishiMapper {
     int updateByPrimaryKeySelective(TableZishi record);
 
     int updateByPrimaryKey(TableZishi record);
+    
+    @Select("SELECT * FROM Table_Zishi WHERE product_id = #{1} ORDER BY Id DESC LIMIT #{0}")
+    List<TableZishi> getTopData(int num, Long id);
 }

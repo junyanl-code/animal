@@ -6,14 +6,14 @@ import java.util.List;
 
 public class TopBushu {
 	// {"categories":["2019/3/1","2019/2/25","2019/2/27","2019/2/26","2019/2/2","2019/2/25","2019/2/25","2019/3/1","2019/2/23","2019/2/23"],"data":[7296,7896,15236,9796,8296,7896,7896,8888,10253,66666]}
-	List<Date> categories = new LinkedList<Date>();
+	List<String> categories = new LinkedList<String>();
 	List<Long> data = new LinkedList<Long>();;
 
-	public List<Date> getCategories() {
+	public List<String> getCategories() {
 		return categories;
 	}
 
-	public void setCategories(List<Date> categories) {
+	public void setCategories(List<String> categories) {
 		this.categories = categories;
 	}
 
