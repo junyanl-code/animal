@@ -1,84 +1,138 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>动物手环</title>
-    <script src="js/echarts.min.js"></script>
-    <script src="js/jquery-1.4.2.js"></script>
-</head>
-<body>
-    <div id="main" style="width: 1200px;height:600px;"></div>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
-        var colors = ['#c23531', '#2f4554', '#61a0a8', '#d48265', '#91c7ae', '#749f83', '#ca8622', '#bda29a', '#6e7074', '#546570', '#c4ccd3'];
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: '运动情况'
-            },
-            tooltip: {},
-           
-            toolbox: {
-                show: true,
-                feature: {
-                    dataZoom: {},
-                    dataView: { readOnly: false },
-                    magicType: { type: ['line', 'bar'] },
-                    restore: {},
-                    saveAsImage: {}
-                }
-            },
-            legend: {
-                data: ['步数']
-            },
-            dataZoom: [
-                {   // 这个dataZoom组件，默认控制x轴。
-                    type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
-                    xAxisIndex: 0,
-                    start: 10,      // 左边在 10% 的位置。
-                    end: 90        // 右边在 60% 的位置。
-                },
-                {   // 这个dataZoom组件，也控制x轴。
-                    type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
-                    xAxisIndex: 0,
-                    start: 10,      // 左边在 10% 的位置。
-                    end: 90       // 右边在 60% 的位置。
-                }
-            ],
-            xAxis: {
-                type: 'category',
-                axisLine: {
-                    onZero: false,
-                    lineStyle: {
-                        color: colors[1]
-                    }
-                },
-                 data:["20:15:00", "20:15:20", "20:15:40", "20:16:00"]
-            },
-            yAxis: {
-                axisLine: {
-                    onZero: false,
-                    lineStyle: {
-                        color: colors[1]
-                    }
-                },
-                type: 'value'
 
-            },
-            series: [{
-                name: '步数',
-                type: 'bar',
-                itemStyle: {
-                    normal: {
-                        color: colors[4]
-                    }
-                },
-                data: [0,51,43,34],
-            }]
-        };
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title>动物手环</title>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/jquery-1.4.2.js"></script>
+	</head>
+
+	<body>
+		<div id="main" style="width: 1200px;height:600px;"></div>
+		<script type="text/javascript">
+			function setSportList(myChartId) {
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById(myChartId));
+				var colors = ['#c23531', '#2f4554', '#61a0a8', '#d48265', '#91c7ae', '#749f83', '#ca8622', '#bda29a', '#6e7074', '#546570', '#c4ccd3'];
+				// 指定图表的配置项和数据
+				var option = {
+					title: {
+						text: '运动情况'
+					},
+					tooltip: {},
+
+					toolbox: {
+						show: true,
+						feature: {
+							dataZoom: {},
+							dataView: {
+								readOnly: false
+							},
+							magicType: {
+								type: ['line', 'bar']
+							},
+							restore: {},
+							saveAsImage: {}
+						}
+					},
+					legend: {
+						data: ['步数']
+					},
+					dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
+							type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+							xAxisIndex: 0,
+							start: 10, // 左边在 10% 的位置。
+							end: 90 // 右边在 60% 的位置。
+						},
+						{ // 这个dataZoom组件，也控制x轴。
+							type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
+							xAxisIndex: 0,
+							start: 10, // 左边在 10% 的位置。
+							end: 90 // 右边在 60% 的位置。
+						}
+					],
+					xAxis: {
+						type: 'category',
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: colors[1]
+							}
+						},
+						data: []
+					},
+					yAxis: {
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: colors[1]
+							}
+						},
+						type: 'value'
+
+					},
+					series: [{
+						name: '步数',
+						type: 'bar',
+						itemStyle: {
+							normal: {
+								color: colors[4]
+							}
+						},
+						data: []
+					}]
+				};
+
+				myChart.showLoading(); //数据加载完之前先显示一段简单的 loading 动画                  
+				var flag = false;
+
+				function reloadChart() {
+					$.ajax({
+						url: 'http://data.liaoyingpeng.top/bushu.ashx',
+						type: 'POST',
+						data: {
+							"product_id": 1
+						},
+						async: true, // 异步刷新
+						datatype: "json",
+						success: function(data) {
+							data = JSON.parse(data); // 将json转换为对象
+							/*
+							                    if(flag)// 否则使用初始化option
+							                        option = myChart.getOption();// 读取当前状态 
+							    
+							                    option.xAxis.data = data.categories;// 修改数据
+							                    option.series[0].data = data.data;*/
+							if(!flag) {
+								myChart.hideLoading(); // 隐藏加载动画 
+								flag = true;
+								console.log("读取成功");
+								myChart.setOption(option); // 初始化参数
+							}
+							// 填入数据
+							myChart.setOption({
+								xAxis: {
+									data: data.categories
+								},
+								series: [{
+									// 根据名字对应到相应的系列
+									name: '步数',
+									data: data.data
+								}]
+							});
+						},
+						error: function(e) {
+							console.error("读取失败");
+						}
+					});
+				}
+				var myTimer = setInterval(reloadChart, 1000); //每 1 秒刷新一次页面显示的数据 
+
+				return myChart;
+			}
+			setSportList("main");
+		</script>
+	</body>
+
 </html>
