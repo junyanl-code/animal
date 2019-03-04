@@ -1,13 +1,17 @@
-package neau.cekong.service;
+package neau.cekong.service.impl;
 
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+
 import neau.cekong.mapper.TableBushuMapper;
 import neau.cekong.pojo.TableBushu;
 import neau.cekong.pojo.TopBushu;
+import neau.cekong.service.GetTopBushuByDidService;
 
+@Service
 public class GetTopBushuByDidServiceImpl implements GetTopBushuByDidService {
 	@Resource
 	TableBushuMapper tableBushuMapper;

@@ -19,6 +19,6 @@ public interface TableBushuMapper {
 
 	int updateByPrimaryKey(TableBushu record);
 
-	@Select("SELECT * FROM Table_Bushu WHERE product_id = #{2} ORDER BY Id DESC LIMIT #{1}")
+	@Select("SELECT * FROM Table_Bushu WHERE product_id = #{1} ORDER BY Id DESC LIMIT #{0}")
 	List<TableBushu> getTopData(int num, Long id);
 }

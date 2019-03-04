@@ -89,10 +89,11 @@
 
 				function reloadChart() {
 					$.ajax({
-						url: 'http://data.liaoyingpeng.top/bushu.ashx',
+						url: 'http://39.107.250.149:8092/data/bushu',
 						type: 'POST',
 						data: {
-							"product_id": 1
+							"product_id": 1,
+							"limit" : 15
 						},
 						async: true, // 异步刷新
 						datatype: "json",
