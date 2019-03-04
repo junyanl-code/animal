@@ -1,4 +1,4 @@
-layui.define(['element','layer'],function(exports){
+layui.define(['element','layer'],function(exports){ 
 
     var $ = layui.$, $body = $('body'),
         element = layui.element,
