@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>动物手环</title>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-1.4.2.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 1200px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var colors = ['#c23531', '#2f4554', '#61a0a8', '#d48265', '#91c7ae', '#749f83', '#ca8622', '#bda29a', '#6e7074', '#546570', '#c4ccd3'];
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '运动情况'
+            },
+            tooltip: {},
+           
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {},
+                    dataView: { readOnly: false },
+                    magicType: { type: ['line', 'bar'] },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            legend: {
+                data: ['步数']
+            },
+            dataZoom: [
+                {   // 这个dataZoom组件，默认控制x轴。
+                    type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                    xAxisIndex: 0,
+                    start: 10,      // 左边在 10% 的位置。
+                    end: 90        // 右边在 60% 的位置。
+                },
+                {   // 这个dataZoom组件，也控制x轴。
+                    type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
+                    xAxisIndex: 0,
+                    start: 10,      // 左边在 10% 的位置。
+                    end: 90       // 右边在 60% 的位置。
+                }
+            ],
+            xAxis: {
+                type: 'category',
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+                 data:["20:15:00", "20:15:20", "20:15:40", "20:16:00"]
+            },
+            yAxis: {
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+                type: 'value'
+
+            },
+            series: [{
+                name: '步数',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: colors[4]
+                    }
+                },
+                data: [0,51,43,34],
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

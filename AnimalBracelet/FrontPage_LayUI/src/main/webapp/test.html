@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>查看设备</title>
+		<!-- For-Mobile-Apps-and-Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!-- //For-Mobile-Apps-and-Meta-Tags -->
+
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+		<link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<script>
+			function insert() {
+				for(var i = 0; i < 5; i++) {
+					var insertText = "<table><tr><td>any thing</td></tr></table>";
+					//document.getElementById("insert").innerHTML(insertText);
+				}
+
+			}
+		</script>
+		<h1>请选择要查看的设备</h1>
+		<section>
+			<div class="controls w3l">
+				<div class="cbcontrol" id="cbControlRight">
+					<</div>
+						<div class="cbcontrol" id="cbControlLeft">></div>
+						<div class="clear"></div>
+				</div>
+				<div class="stage">
+
+					<div class="cbImage w3">
+						<h3>小猪1</h3>
+						<form action="#" method="post">
+							<input type="text" class="text1" readonly="readonly"  value="代号：pig1">
+							<input type="text" class="password1" readonly="readonly"  value="备注：第一只测试小猪">
+                                                        <button onclick="window.open('index.html');" >进入</button>
+							
+						</form>
+					</div>
+					<div class="cbImage active signin agileits">
+						<h3>小猪2</h3>
+						<form action="#" method="post">
+							<input type="text" class="text1" readonly="readonly"  value="代号：pig2">
+							<input type="text" class="password1" readonly="readonly"  value="备注：无">
+							<button>进入</button>
+						</form>
+					</div>
+					<div class="cbImage active signin agileits">
+						<h3>小猪3</h3>
+						<form action="#" method="post">
+							<input type="text" class="text1" readonly="readonly"  value="代号：pig3">
+							<input type="text" class="password1" readonly="readonly"  value="备注：测试添加">
+							<button>进入</button>
+						</form>
+					</div>
+					<div class="cbImage agileinfo">
+						<h3>添加新设备</h3>
+						<form action="#" method="post">
+							<input type="text" class="name" name="username" placeholder="添加小猪代号" required="">
+							<input type="password" class="password" name="password" placeholder="绑定设备" required="">
+							<input type="password" class="password" name="confirm password" placeholder="备注" required="">
+							<input type="submit" value="添加">
+						</form>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+		</section>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/coverflow-slideshow.js"></script>
+	</body>
+
+</html>

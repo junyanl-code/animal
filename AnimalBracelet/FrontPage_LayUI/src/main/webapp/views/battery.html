@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="js/echarts.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div id="main" style="width: 1200px; height: 600px;"></div>
+        <script type="text/javascript">
+
+
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '电池电量情况'
+                },
+                tooltip: {},
+
+                xAxis: {
+                    type: 'category',
+                    data: ['2019-1-10', '2019-1-11', '2019-1-12', '2019-1-13', '2019-1-14', '2019-1-15', '2019-11-16','2019-1-17', '2019-11-18',]
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    data: [99, 97, 94, 92, 90, 87, 83, 80, 78],
+                    type: 'line',
+                    smooth: true
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    </div>
+</body>
+</html>

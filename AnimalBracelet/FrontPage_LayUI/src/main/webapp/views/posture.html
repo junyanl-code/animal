@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>动物手环</title>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-1.4.2.js"></script>
+</head>
+<body>
+    <div id="main3" style="width: 1200px;height:600px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main3'));
+        setTimeout(function () {
+
+            option = {
+                title: {
+                    text: '姿态情况'
+                },
+                tooltip: {
+                    trigger: 'none',
+                    axisPointer: {
+                        type: 'cross'
+                    }
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataZoom: {},
+                        dataView: { readOnly: false },
+                        magicType: { type: ['line', 'bar'] },
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                legend: {},
+                tooltip: {
+                    trigger: 'axis',
+                    showContent: false
+                },
+                dataset: {
+                    source: [
+                        ['时间', "00:00", "01:00", "02:00", "03:00", "04:00", "05:00","06:00", "07:00", "08:00", "09:00", "10:00", "11:00","12:00", "13:00", "14:00", "15:00", "16:00", "17:00","18:00", "19:00", "20:00", "21:00", "22:00", "23:00",],
+                        ['站立', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7,41.1, 30.4, 65.1, 53.3, 83.8, 98.7,41.1, 30.4, 65.1, 53.3, 83.8, 98.7,41.1, 30.4, 65.1, 53.3, 83.8, 98.7,],
+                        ['侧卧', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1,86.5, 92.1, 85.7, 83.1, 73.4, 55.1,86.5, 92.1, 85.7, 83.1, 73.4, 55.1,86.5, 92.1, 85.7, 83.1, 73.4, 55.1,],
+                        ['躺卧', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5,24.1, 67.2, 79.5, 86.4, 65.2, 82.5,24.1, 67.2, 79.5, 86.4, 65.2, 82.5,24.1, 67.2, 79.5, 86.4, 65.2, 82.5,],
+                        
+                    ]
+                },
+                xAxis: {
+                    type: 'category',
+                    
+                },
+                yAxis: {
+                    gridIndex: 0,
+                    
+                },
+                
+                grid: { top: '55%' },
+                dataZoom: [
+                    {   // 这个dataZoom组件，默认控制x轴。
+                        type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                        
+                        start: 10,      // 左边在 10% 的位置。
+                        end: 90         // 右边在 60% 的位置。
+                    },
+                    {   // 这个dataZoom组件，也控制x轴。
+                        type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
+                       
+                        start: 10,      // 左边在 10% 的位置。
+                        end: 90        // 右边在 60% 的位置。
+                    }
+                ],
+                series: [
+                    { type: 'line', smooth: false, seriesLayoutBy: 'row' },
+                    { type: 'line', smooth: false, seriesLayoutBy: 'row' },
+                    { type: 'line', smooth: false, seriesLayoutBy: 'row' },
+                
+                    {
+                        type: 'pie',
+                        id: 'pie',
+                        radius: '30%',
+                        center: ['50%', '25%'],
+                        label: {
+                            formatter: '{b}: {@2012} ({d}%)'
+                        },
+                        encode: {
+                            itemName: '时间',
+                            value: '2012',
+                            tooltip: '2012'
+                        }
+                    }
+                ]
+            };
+
+            myChart.on('updateAxisPointer', function (event) {
+                var xAxisInfo = event.axesInfo[0];
+                if (xAxisInfo) {
+                    var dimension = xAxisInfo.value + 1;
+                    myChart.setOption({
+                        series: {
+                            id: 'pie',
+                            label: {
+                                formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+                            },
+                            encode: {
+                                value: dimension,
+                                tooltip: dimension
+                            }
+                        }
+                    });
+                }
+            });
+
+            myChart.setOption(option);
+
+        });
+    </script>
+</body>
+</html>
