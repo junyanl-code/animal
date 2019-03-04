@@ -140,10 +140,10 @@
 				$.ajax({
 					url: 'http://39.107.250.149:8092/data/zishi',
 					type: 'POST',
-					headers:{"Access-Control-Allow-Origin":"*"},
+		//			headers:{"Access-Control-Allow-Origin":"*"},
 					data: {
 						"product_id": 1,
-						"limit": 15
+						"limit": 24
 					},
 					async: true, // 异步刷新
 					datatype: "json",
@@ -174,10 +174,10 @@
 						myChart.setOption({
 							dataset: {
 								source: [
-									['时间'].concat(data.time),
-									['站立'].concat(data.zhan),
-									['侧卧'].concat(data.ce),
-									['躺卧'].concat(data.tang),
+									['时间'].concat(data.time.reverse()),
+									['站立'].concat(data.zhan.reverse()),
+									['侧卧'].concat(data.ce.reverse()),
+									['躺卧'].concat(data.tang.reverse()),
 								]
 							}
 						});
