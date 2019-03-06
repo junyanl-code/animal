@@ -3,6 +3,7 @@ package neau.cekong.controller;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,9 +20,10 @@ public class InserDataController {
 	
 	@RequestMapping("wendu/{proId}/{wendu}")
 	@ResponseBody
-	public String save(TableWendu record,Long proId, Double wendu){	
+	public String save(TableWendu record,@PathVariable Long proId,@PathVariable Double wendu){	
 		record.setProductId(proId);
 		record.setWendu(wendu);
+		System.out.println("Controller" + proId + " " + wendu);
 		insertNewDataByDidService.insertInto(record);	
 		return "OK";
 	}

@@ -28,6 +28,7 @@ public class InserNewDataByDidServiceImpl implements InsertNewDataByDidService {
 
 	@Override
 	public Object insertInto(TableWendu record) {
+		System.out.println("Service:" + record.getProductId() + " " + record.getWendu());
 		return tableWenduMapper.insertSelective(record);
 	}
 
