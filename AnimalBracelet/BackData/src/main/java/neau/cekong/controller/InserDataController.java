@@ -33,7 +33,8 @@ public class InserDataController {
 	
 	@RequestMapping("zishi")
 	@ResponseBody
-	public String save(TableZishi record){	
+	public String save(TableZishi record){
+		record.setTime(new Date());
 		insertNewDataByDidService.insertInto(record);	
 		return "OK";
 	}
@@ -41,6 +42,7 @@ public class InserDataController {
 	@RequestMapping("bushu")
 	@ResponseBody
 	public String save(TableBushu record){	
+		record.setTime(new Date());
 		insertNewDataByDidService.insertInto(record);	
 		return "OK";
 	}
