@@ -104,7 +104,18 @@
 				<artifactId>commons-fileupload</artifactId>
 				<version>${commons-fileupload-version}</version>
 			</dependency>
+
+			<!-- sqlserver -->
+			<dependency>
+				<groupId>com.microsoft.sqlserver</groupId>
+				<artifactId>sqljdbc4</artifactId>
+				<version>4.2</version>
+			</dependency>
 		</dependencies>
+
+
+
+
 	</dependencyManagement>
 
 	<build>

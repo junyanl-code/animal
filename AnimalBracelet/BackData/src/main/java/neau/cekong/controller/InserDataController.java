@@ -1,5 +1,7 @@
 package neau.cekong.controller;
 
+import java.util.Date;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,7 @@ public class InserDataController {
 	public String save(TableWendu record,@PathVariable Long proId,@PathVariable Double wendu){	
 		record.setProductId(proId);
 		record.setWendu(wendu);
+		record.setTime(new Date());
 		System.out.println("Controller" + proId + " " + wendu);
 		insertNewDataByDidService.insertInto(record);	
 		return "OK";
@@ -32,13 +35,13 @@ public class InserDataController {
 	@ResponseBody
 	public String save(TableZishi record){	
 		insertNewDataByDidService.insertInto(record);	
-		return null;
+		return "OK";
 	}
 	
 	@RequestMapping("bushu")
 	@ResponseBody
 	public String save(TableBushu record){	
 		insertNewDataByDidService.insertInto(record);	
-		return null;
+		return "OK";
 	}
 }
