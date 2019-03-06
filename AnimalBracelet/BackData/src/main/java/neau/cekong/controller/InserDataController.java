@@ -31,6 +31,14 @@ public class InserDataController {
 		return "OK";
 	}
 	
+	@RequestMapping("wendu")
+	@ResponseBody
+	public String save(TableWendu record){
+		record.setTime(new Date());
+		insertNewDataByDidService.insertInto(record);	
+		return "OK";
+	}
+	
 	@RequestMapping("zishi")
 	@ResponseBody
 	public String save(TableZishi record){
