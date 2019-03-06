@@ -1,113 +1,179 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>动物手环</title>
-    <!-- 引入 echarts.js -->
-    <script src="js/echarts.min.js"></script>
-    <script src="js/jquery-1.4.2.js"></script>
-</head>
-<body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 1200px;height:600px;"></div>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
-        var colors = ['#c23531', '#2f4554', '#61a0a8', '#d48265', '#91c7ae', '#749f83', '#ca8622', '#bda29a', '#6e7074', '#546570', '#c4ccd3'];
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: '体温曲线图'
-            },
-            tooltip: {
-                trigger: 'none',
-                axisPointer: {
-                    type: 'cross'
-                }
-            },
 
-            toolbox: {
-                show: true,
-                feature: {
-                    dataZoom: {},
-                    dataView: { readOnly: false },
-                    magicType: { type: ['line', 'bar'] },
-                    restore: {},
-                    saveAsImage: {}
-                }
-            },
-            legend: {
-                data: ['体温']
-            },
-            xAxis: {
-                type: 'category',
-                axisTick: {
-                    alignWithLabel: true
-                },
-                axisLine: {
-                    onZero: false,
-                    lineStyle: {
-                        color: colors[1]
-                    }
-                },
-                axisPointer: {
-                    label: {
-                        formatter: function (params) {
-                            return '步数  ' + params.value + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
-                        }
-                    }
-                },
-                data: ["00:00", "00:30", "01:00", "01:30","02:00", "02:30","03:00", "03:30","04:00", "04:30","05:00", "05:30","06:00", "06:30","07:00", "07:30","08:00", "08:30","09:00", "09:30","10:00","10:30","11:00", "11:30","12:00", "12:30","13:00", "13:30","14:00", "14:30","15:00", "15:30","16:00", "16:30","17:00", "17:30","18:00", "18:30","19:00", "19:30","20:00", "20:30","21:00", "21:30","22:00", "22:30","23:00", "23:30"]
-            },
-            yAxis: {
-                type: 'category',
+	<head>
+		<meta charset="utf-8">
+		<title>动物手环</title>
+		<!-- 引入 echarts.js -->
+		<script src="js/echarts.min.js"></script>
+		<script src="js/jquery-1.4.2.js"></script>
+	</head>
 
-                axisLine: {
-                    onZero: false,
-                    lineStyle: {
-                        color: colors[1]
-                    }
-                },
-            },
-            dataZoom: [
-                {   // 这个dataZoom组件，默认控制x轴。
-                    type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
-                    
-                    start: 10,      // 左边在 10% 的位置。
-                    end: 90         // 右边在 60% 的位置。
-                },
-                {   // 这个dataZoom组件，也控制x轴。
-                    type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
-                    
-                    start: 10,      // 左边在 10% 的位置。
-                    end: 90        // 右边在 60% 的位置。
-                }
-            ],
+	<body>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		<div id="main" style="width: 1200px;height:600px;"></div>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+			var colors = ['#c23531', '#2f4554', '#61a0a8', '#d48265', '#91c7ae', '#749f83', '#ca8622', '#bda29a', '#6e7074', '#546570', '#c4ccd3'];
+			// 指定图表的配置项和数据
+			var option = {
+				title: {
+					text: '体温曲线图'
+				},
+				tooltip: {
+					trigger: 'none',
+					axisPointer: {
+						type: 'cross'
+					}
+				},
 
-            series: [{
-                name: '体温',
-                type: 'line',
-                smooth: true,
-                data: [36.6, 36.6, 36.5, 36.5, 36.5, 36.4,36.4, 36.4, 36.5, 36.5, 36.6, 36.6, 36.6, 36.7, 36.7, 36.7, 36.8,36.8,36.8, 36.9, 36.9,37.0,37.0, 37.1, 37.1, 37.1,37.2,37.2,37.2,37.3, 37.3, 37.4, 37.3, 37.3,37.3,37.2,37.2,37.1,37.1,37.0,37.0,36.9,36.9,36.8,36.8 ,36.7,36.7,36.6],
+				toolbox: {
+					show: true,
+					feature: {
+						dataZoom: {},
+						dataView: {
+							readOnly: false
+						},
+						magicType: {
+							type: ['line', 'bar']
+						},
+						restore: {},
+						saveAsImage: {}
+					}
+				},
+				legend: {
+					data: ['体温']
+				},
+				xAxis: {
+					type: 'category',
+					axisTick: {
+						alignWithLabel: true
+					},
+					axisLine: {
+						onZero: false,
+						lineStyle: {
+							color: colors[1]
+						}
+					},
+					axisPointer: {
+						label: {
+							formatter: function(params) {
+								return '步数  ' + params.value + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+							}
+						}
+					},
+					data: ["00:00", "00:30", "01:00", "01:30", "02:00", "02:30", "03:00", "03:30", "04:00", "04:30", "05:00", "05:30", "06:00", "06:30", "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30", "23:00", "23:30"]
+				},
+				yAxis: {
+					type: 'category',
 
-                markPoint: {
-                    data: [
-                        { type: 'max', name: '最大值', value: 37.9 },
-                        { type: 'min', name: '最小值', value: 38.5}
-                    ],
+					axisLine: {
+						onZero: false,
+						lineStyle: {
+							color: colors[1]
+						}
+					},
+				},
+				dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
+						type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
 
-                },
-                markLine: {
-                    data: [
-                        { type: 'average', name: '平均值' }
-                    ]
-                }
-            }]
-        };
+						start: 10, // 左边在 10% 的位置。
+						end: 90 // 右边在 60% 的位置。
+					},
+					{ // 这个dataZoom组件，也控制x轴。
+						type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-    
-</body>
+						start: 10, // 左边在 10% 的位置。
+						end: 90 // 右边在 60% 的位置。
+					}
+				],
+
+				series: [{
+					name: '体温',
+					type: 'line',
+					smooth: true,
+					data: [36.6, 36.6, 36.5, 36.5, 36.5, 36.4, 36.4, 36.4, 36.5, 36.5, 36.6, 36.6, 36.6, 36.7, 36.7, 36.7, 36.8, 36.8, 36.8, 36.9, 36.9, 37.0, 37.0, 37.1, 37.1, 37.1, 37.2, 37.2, 37.2, 37.3, 37.3, 37.4, 37.3, 37.3, 37.3, 37.2, 37.2, 37.1, 37.1, 37.0, 37.0, 36.9, 36.9, 36.8, 36.8, 36.7, 36.7, 36.6],
+
+					markPoint: {
+						data: [{
+								type: 'max',
+								name: '最大值',
+								value: 37.9
+							},
+							{
+								type: 'min',
+								name: '最小值',
+								value: 38.5
+							}
+						],
+
+					},
+					markLine: {
+						data: [{
+							type: 'average',
+							name: '平均值'
+						}]
+					}
+				}]
+			};
+
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+
+			myChart.showLoading(); //数据加载完之前先显示一段简单的 loading 动画                  
+			var flag = false;
+
+			function reloadChart() {
+				$.ajax({
+					url: 'http://39.107.250.149:8092/data/wendu',
+					type: 'POST',
+					//			headers:{"Access-Control-Allow-Origin":"*"},
+					data: {
+						"product_id": 1,
+						"limit": 24
+					},
+					async: true, // 异步刷新
+					datatype: "json",
+					success: function(data) {
+						try {
+							data = JSON.parse(data); // 将json转换为对象
+						} catch(e) {
+							//TODO handle the exception	
+						}
+
+						/*
+						                    if(flag)// 否则使用初始化option
+						                        option = myChart.getOption();// 读取当前状态 
+						    
+						                    option.xAxis.data = data.categories;// 修改数据
+						                    option.series[0].data = data.data;*/
+						if(!flag) {
+							myChart.hideLoading(); // 隐藏加载动画 
+							flag = true;
+							console.log("读取成功");
+							myChart.setOption(option); // 初始化参数
+						}
+
+						// 填入数据
+						myChart.setOption({
+							xAxis: {
+								data: data.time.reverse()
+							},
+							series: [{
+		
+								data: data.wendu.reverse()
+							}]
+						});
+					},
+					error: function(e) {
+						console.error("读取失败");
+					}
+				});
+			}
+			var myTimer = setInterval(reloadChart, 1000); //每 1 秒刷新一次页面显示的数据
+		</script>
+
+	</body>
+
 </html>

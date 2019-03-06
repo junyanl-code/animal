@@ -18,7 +18,7 @@ public class GetTopWenduByDidServiceImpl implements GetTopWenduByDidService {
 	@Resource
 	TableWenduMapper tableWenduMapper;
 
-	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
+	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/mm/dd-HH:mm:ss");
 
 	@Override
 	public TopWendu getTopWenduByDidService(int num, Long id) {
