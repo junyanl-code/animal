@@ -174,10 +174,10 @@
 						myChart.setOption({
 							dataset: {
 								source: [
-									['时间'].concat(data.time.reverse()),
-									['站立'].concat(data.zhan.reverse()),
-									['侧卧'].concat(data.ce.reverse()),
-									['躺卧'].concat(data.tang.reverse()),
+									data.time.reverse(),
+									data.zhan.reverse(),
+									data.ce.reverse(),
+									data.tang.reverse(),
 								]
 							}
 						});
