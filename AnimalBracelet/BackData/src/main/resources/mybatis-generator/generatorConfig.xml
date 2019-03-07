@@ -57,7 +57,7 @@
                selectByExampleQueryId="false">
         </table> -->
         
-         <table tableName="table_product" domainObjectName="TableProduct"
+         <table tableName="table_user" domainObjectName="TableUser"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
