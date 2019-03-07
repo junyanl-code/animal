@@ -6,12 +6,14 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import neau.cekong.mapper.TableUserMapper;
 import neau.cekong.pojo.TableUser;
 import neau.cekong.service.RegisterAndLoginService;
 
 @Service
+@Transactional(readOnly=false)
 public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 	@Resource
 	TableUserMapper tableUserMapper;
