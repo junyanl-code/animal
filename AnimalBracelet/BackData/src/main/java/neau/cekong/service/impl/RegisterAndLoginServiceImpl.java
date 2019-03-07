@@ -13,7 +13,6 @@ import neau.cekong.pojo.TableUser;
 import neau.cekong.service.RegisterAndLoginService;
 
 @Service
-@Transactional(readOnly=false)
 public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 	@Resource
 	TableUserMapper tableUserMapper;
