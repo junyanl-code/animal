@@ -15,14 +15,13 @@ import neau.cekong.service.GetAllProductByUidService;
 import neau.cekong.service.RegisterAndLoginService;
 
 @Controller
-@RequestMapping("product")
 public class CheckProductOrUserController {
 	@Resource
 	GetAllProductByUidService getAllProductByUidService;
 	@Resource
 	RegisterAndLoginService registerAndLoginService;
 
-	@RequestMapping("getbyuid/{user_id}")
+	@RequestMapping("product/getbyuid/{user_id}")
 	@ResponseBody
 	public List<TableProduct> productCheckAll(@PathVariable Long user_id) {
 
@@ -33,6 +32,6 @@ public class CheckProductOrUserController {
 	@ResponseBody
 	public Map<String, String> regist(@PathVariable String userName,@PathVariable  String password) {
 
-		return registerAndLoginService.login(userName, password);
+		return registerAndLoginService.regist(userName, password);
 	}
 }

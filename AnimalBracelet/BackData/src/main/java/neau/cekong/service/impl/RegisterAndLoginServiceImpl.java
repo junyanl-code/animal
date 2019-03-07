@@ -5,10 +5,13 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+
 import neau.cekong.mapper.TableUserMapper;
 import neau.cekong.pojo.TableUser;
 import neau.cekong.service.RegisterAndLoginService;
 
+@Service
 public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 	@Resource
 	TableUserMapper tableUserMapper;
@@ -48,7 +51,7 @@ public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 				result.put("stat", "2");
 			}
 		}
-		return null;
+		return result;
 	}
 
 }
