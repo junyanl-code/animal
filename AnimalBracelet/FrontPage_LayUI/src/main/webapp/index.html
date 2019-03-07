@@ -8,10 +8,11 @@
 		<link rel="stylesheet" href="assets/css/layui.css">
 		<link rel="stylesheet" href="assets/css/admin.css">
 		<link rel="icon" href="/favicon.ico">
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 		<title>后台状况</title>
 	</head>
 
-	<body class="layui-layout-body">
+	<body class="layui-layout-body" onhashchange="checkName()">
 		<div class="layui-layout layui-layout-admin">
 			<div class="layui-header custom-header">
 
@@ -38,7 +39,7 @@
 
 					<div class="custom-logo">
 						<img src="assets/images/pig.png" alt="" />
-						<h1>测试小猪1号</h1>
+						<h1 id="lefthead">测试小猪1号</h1>
 					</div>
 					<ul id="Nav" class="layui-nav layui-nav-tree">
 						<li class="layui-nav-item">
@@ -109,9 +110,35 @@
 </html>
 
 <script>
-	if(location.hash == null || location.hash == ""){
+	if(location.hash == null || location.hash == "") {
 		alert("您未选择设备");
 		location.href = "selfront.html";
 	}
-	
+
+	function checkName() {
+		$.ajax({
+			type: "get",
+			url: "http://animal.actim.top:8092/data/product/getbyuid/1",
+			async: true,
+			datatype: "json",
+			success: function(data) {
+				try {
+					data = JSON.parse(data); // 将json转换为对象
+				} catch(e) {
+					//TODO handle the exception	 
+				}
+				$(data).each(function() {
+					if("#" + this.productId == location.hash) {
+						document.getElementById("lefthead").innerText = this.productName;
+					}
+				});
+			},
+			error: function(e) {
+				console.error("读取失败");
+				alert("读取失败");
+			}
+		});
+	};
+	checkName();
+	addEventListener();
 </script>
