@@ -37,12 +37,12 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>-->
 
-        <table tableName="table_bushu" domainObjectName="TableBushu"
+       <!--   <table tableName="table_bushu" domainObjectName="TableBushu"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
-            <!--<columnRenamingRule searchString="^D_"
-                                replaceString=""/>-->
+            <columnRenamingRule searchString="^D_"
+                                replaceString=""/>
         </table>
         
         <table tableName="table_wendu" domainObjectName="TableWendu"
@@ -55,7 +55,13 @@
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
-        </table>
+        </table> -->
+        
+         <table tableName="table_product" domainObjectName="TableProduct"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table> 
 
     </context>
 </generatorConfiguration>

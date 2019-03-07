@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>选择界面</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../assets/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../assets/css/admin.css" media="all">
+		<script src="../../assets/layui.js"></script>
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+	</head>
+
+	<body>
+		<div style="height: 1em;"> </div>
+		<style>
+			/* 样式 */
+			
+			#LAY-component-grid-stack .layui-card-body {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+				height: 3em;
+			}
+		</style>
+
+		<div class="layui-fluid" id="LAY-component-grid-stack">
+			<div class="layui-row layui-col-space10" id="myLAY-component-grid-stack-row">
+
+			</div>
+		</div>
+	</body>
+
+	<script id="pigcard" type="text/html">
+
+		<!-- 填充内容 -->
+		<a href="javascript:window.open('../../index.html#{{ d.product_id }}');void(0)">
+			<div class="layui-card" style="border-color: #23c6c8;border-width:thin;color: #428bca;border-style: solid;">
+				<div class="layui-card-header" style="background-color: #d9edf7;color: inherit;">
+					<h2>设备名称：<b>{{ d.name }}</b></h2>
+				</div>
+				<div class="layui-card-body">
+					<div>
+						<i class="layui-icon layui-icon-find-fill">工作状态：<b>{{ d.working }}</b></i> &nbsp;&nbsp;&nbsp;
+						<i class="layui-icon">&#xe617;穿戴状态：<b>{{ d.power }}</b></i>
+					</div>
+				</div>
+			</div>
+		</a>
+
+	</script>
+
+	<script>
+		function addPinal(product_id, name, woking, power) {
+			layui.use('laytpl', function() {
+				var laytpl = layui.laytpl;
+				var data = { //数据
+					"product_id": product_id,
+					"working": woking,
+					"power": power,
+					"name": name
+				}
+				var view = document.createElement('div');
+				view.className = "layui-col-md4";
+				laytpl(pigcard.innerHTML).render(data, function(html) {
+					view.innerHTML = html;
+				});
+				document.getElementById("myLAY-component-grid-stack-row").appendChild(view);
+			});
+		}
+		//		addPinal(1, "小猪1号", '工作中', '穿戴中');
+		//		addPinal(2, "小猪2号", '工作中', '穿戴中');
+		//		addPinal(2, "小猪2号", '工作中', '穿戴中');
+	</script>
+
+	<script>
+		$.ajax({
+			type: "get",
+			url: "http://animal.actim.top:8092/data/product/getbyuid/1",
+			async: true,
+			datatype: "json", 
+			success: function(data) {
+				try {
+					data = JSON.parse(data); // 将json转换为对象
+				} catch(e) {
+					//TODO handle the exception	 
+				}
+				$(data).each(function(){
+					addPinal(this.productId, this.productName, this.working, '穿戴中'); 
+				});
+			},
+			error: function(e) {
+				console.error("读取失败");
+				alert("读取失败");
+			}
+		});
+	</script>
+
+</html>

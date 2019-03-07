@@ -92,7 +92,7 @@
 						url: 'http://39.107.250.149:8092/data/bushu',
 						type: 'POST',
 						data: {
-							"product_id": 1,
+							"product_id": parent.location.hash.substr(1),
 							"limit": 15
 						},
 						headers:{"Access-Control-Allow-Origin":"*"},

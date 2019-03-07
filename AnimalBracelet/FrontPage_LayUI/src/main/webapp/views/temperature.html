@@ -130,7 +130,7 @@
 					type: 'POST',
 					//			headers:{"Access-Control-Allow-Origin":"*"},
 					data: {
-						"product_id": 1,
+						"product_id": parent.location.hash.substr(1),
 						"limit": 24
 					},
 					async: true, // 异步刷新
