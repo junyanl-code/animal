@@ -19,7 +19,7 @@ public interface TableWenduMapper {
 
     int updateByPrimaryKey(TableWendu record);
     
-//    @Select("SELECT * FROM Table_Wendu WHERE product_id = #{1} ORDER BY Id DESC LIMIT #{0}")
-    @Select(" SELECT  TOP(#{0}) * FROM Table_Wendu WHERE product_id = #{1} ORDER BY Id DESC")
+    @Select("SELECT * FROM Table_Wendu WHERE product_id = #{1} ORDER BY Id DESC LIMIT #{0}")
+//  @Select(" SELECT  TOP(#{0}) * FROM Table_Wendu WHERE product_id = #{1} ORDER BY Id DESC")
     List<TableWendu> getTopData(int num, Long id);
 }
