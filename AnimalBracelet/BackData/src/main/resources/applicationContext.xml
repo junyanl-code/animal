@@ -43,7 +43,7 @@
     		<tx:method name="ins*"/>
     		<tx:method name="del*"/>
     		<tx:method name="upd*"/>
-    		<tx:method name="Regist*"/>
+    		<tx:method name="regis*"/>
     		<tx:method name="*" read-only="true"/>
     	</tx:attributes>
     </tx:advice>
