@@ -43,6 +43,14 @@
 		<filter-name>CrossOrigin</filter-name>
 		<filter-class>neau.cekong.controller.CrossOrigin</filter-class>
 	</filter>
+	<filter>
+		<description>
+		</description>
+		<display-name>UserCheck</display-name>
+		<filter-name>UserCheck</filter-name>
+		<filter-class>neau.cekong.controller.UserCheck</filter-class>
+	</filter>
+	
 	<filter-mapping>
 		<filter-name>encoding</filter-name>
 		<url-pattern>/*</url-pattern>
@@ -51,4 +59,9 @@
 		<filter-name>CrossOrigin</filter-name>
 		<url-pattern>/CrossOrigin</url-pattern>
 	</filter-mapping>
+	<filter-mapping>
+		<filter-name>UserCheck</filter-name>
+		<url-pattern>/UserCheck</url-pattern>
+	</filter-mapping>
+	
 </web-app>

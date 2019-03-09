@@ -45,25 +45,25 @@
 					<div class="cbImage w3">
 						<h3>小猪1</h3>
 						<form action="#" method="post">
-							<input type="text" class="text1" readonly="readonly"  value="代号：pig1">
-							<input type="text" class="password1" readonly="readonly"  value="备注：第一只测试小猪">
-                                                        <button onclick="window.open('index.html');" >进入</button>
-							
+							<input type="text" class="text1" readonly="readonly" value="代号：pig1">
+							<input type="text" class="password1" readonly="readonly" value="备注：第一只测试小猪">
+							<button onclick="window.open('index.html');">进入</button>
+
 						</form>
 					</div>
 					<div class="cbImage active signin agileits">
 						<h3>小猪2</h3>
 						<form action="#" method="post">
-							<input type="text" class="text1" readonly="readonly"  value="代号：pig2">
-							<input type="text" class="password1" readonly="readonly"  value="备注：无">
+							<input type="text" class="text1" readonly="readonly" value="代号：pig2">
+							<input type="text" class="password1" readonly="readonly" value="备注：无">
 							<button>进入</button>
 						</form>
 					</div>
 					<div class="cbImage active signin agileits">
 						<h3>小猪3</h3>
 						<form action="#" method="post">
-							<input type="text" class="text1" readonly="readonly"  value="代号：pig3">
-							<input type="text" class="password1" readonly="readonly"  value="备注：测试添加">
+							<input type="text" class="text1" readonly="readonly" value="代号：pig3">
+							<input type="text" class="password1" readonly="readonly" value="备注：测试添加">
 							<button>进入</button>
 						</form>
 					</div>
@@ -85,8 +85,65 @@
 	</body>
 
 </html>
-
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script>
-	
-//	alert(location.hash.substr(1));
+	var temp;
+	$.ajax({
+		type: "get",
+		url: "http://animal.actim.top:8092/data/login/lyp/123",
+		async: false,
+		datatype: "json",
+		beforeSend: function(xhr) {
+			xhr.withCredentials = true;
+		},
+		crossDomain: true,
+		success: function(data) {
+			try {
+				data = JSON.parse(data); // 将json转换为对象
+			} catch(e) {
+				//TODO handle the exception	 
+			}
+			$.cookie('LOGSESSION', data.LOGSESSION);
+			temp = data.LOGSESSION;
+			console.log(data.msg);
+		},
+		error: function(e) {
+			console.error("0读取失败");
+			alert("0读取失败");
+		}
+	});
+
+	try {
+		var log = $.cookie("LOGSESSION");
+	//	var log = temp;
+		$.ajax({
+			type: "get",
+			url: "http://animal.actim.top:8092/data/product/getbyuid/1",
+			async: false,
+			data: {
+				"LOGSESSION": log
+			},
+			datatype: "json",
+			beforeSend: function(xhr) {
+				xhr.withCredentials = true;
+			},
+			crossDomain: true,
+			success: function(data) {
+				try {
+					data = JSON.parse(data); // 将json转换为对象
+				} catch(e) {
+					//TODO handle the exception	 
+				}
+				$(data).each(function() {
+					alert(this.productId + this.productName + this.working);
+				});
+			},
+			error: function(e) {
+				console.error("读取失败");
+				alert("读取失败");
+			}
+		});
+	} catch(e) {
+		console.log("失败...");	 
+	}
 </script>

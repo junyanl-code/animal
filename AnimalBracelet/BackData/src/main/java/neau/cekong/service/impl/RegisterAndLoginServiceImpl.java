@@ -4,9 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import neau.cekong.mapper.TableUserMapper;
 import neau.cekong.pojo.TableUser;
@@ -37,20 +38,26 @@ public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 	}
 
 	@Override
-	public Map<String, String> login(String name, String password) {
+	public Map<String, String> login(String name, String password, HttpSession session, ServletContext context) {
 		TableUser tu = tableUserMapper.selectByName(name);
+		
 		Map<String, String> result = new HashMap<String, String>();
 		if (tu == null) {
 			result.put("msg", "用户名不存在");
 			result.put("stat", "1");
 		} else {
 			if (tu.getPassword().equals(password)) {
+				tu.setPassword(null);
+				session.setAttribute("loginedUser", tu);
+				context.setAttribute(session.getId(), tu);
 				result.put("msg", "登陆成功");
 				result.put("stat", "0");
+				result.put("LOGSESSION", session.getId());
 			}else{
 				result.put("msg", "密码错误");
 				result.put("stat", "2");
 			}
+			System.out.println(tu.getUserId());
 		}
 		return result;
 	}

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FrontPage_LayUI:war">
+    <output-path>$PROJECT_DIR$/FrontPage_LayUI/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FrontPage_LayUI</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="FrontPage_LayUI.war">
+      <element id="artifact" artifact-name="FrontPage_LayUI:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db80af5f-bed9-438d-a3f7-f242ba0bef07" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckProductOrUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckProductOrUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CrossOrigin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CrossOrigin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/RegisterAndLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/RegisterAndLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/RegisterAndLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/RegisterAndLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackData/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/posture.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/posture.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/sports.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/sports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/temperature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/stack.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/stack.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/FrontPage_LayUI/target/" />
+    <ignored path="$PROJECT_DIR$/BackData/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Maven/apache-maven-3.3.3" />
+        <option name="userSettingsFile" value="E:\Program Files\Maven\apache-maven-3.3.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="150" />
+    <option name="y" value="15" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <flattenPackages Scope="true" />
+      <showMembers Scope="true" />
+      <hideEmptyPackages Scope="true" />
+      <compactDirectories Scope="true" />
+      <autoscrollToSource Scope="true" />
+      <autoscrollFromSource Scope="true" />
+      <sortByType Scope="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
+          <expand>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="neau" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="neau" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cekong" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AnimalBracelet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalBracelet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalBracelet" type="462c0819:PsiDirectoryNode" />
+              <item name="BackData" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AnimalBracelet" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BackData" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552102129340" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db80af5f-bed9-438d-a3f7-f242ba0bef07" name="Default Changelist" comment="" />
+      <created>1552101065097</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552101065097</updated>
+      <workItem from="1552101071311" duration="1215000" />
+      <workItem from="1552102570380" duration="772000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1987000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="120" y="12" width="1400" height="784" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" x="534" y="68" width="644" height="652" id="Project" order="0" type="FLOATING" weight="0.24962743" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3297546" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.32935917" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

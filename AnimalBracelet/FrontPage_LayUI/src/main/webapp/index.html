@@ -108,7 +108,7 @@
 	</body>
 
 </html>
-
+<script src="js/jquery.cookie.js"></script>
 <script>
 	if(location.hash == null || location.hash == "") {
 		alert("您未选择设备");
@@ -121,6 +121,9 @@
 			url: "http://animal.actim.top:8092/data/product/getbyuid/1",
 			async: true,
 			datatype: "json",
+			data: {
+				"LOGSESSION": $.cookie("LOGSESSION")
+			},
 			success: function(data) {
 				try {
 					data = JSON.parse(data); // 将json转换为对象

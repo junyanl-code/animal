@@ -6,6 +6,7 @@
 		<title>动物手环</title>
 		<script src="js/echarts.min.js"></script>
 		<script src="js/jquery-1.4.2.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
 	</head>
 
 	<body>
@@ -143,7 +144,8 @@
 		//			headers:{"Access-Control-Allow-Origin":"*"},
 					data: {
 						"product_id": parent.location.hash.substr(1),
-						"limit": 24
+						"limit": 24,
+						"LOGSESSION": $.cookie("LOGSESSION")
 					},
 					async: true, // 异步刷新
 					datatype: "json",

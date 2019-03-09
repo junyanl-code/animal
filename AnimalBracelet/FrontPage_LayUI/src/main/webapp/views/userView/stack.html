@@ -76,21 +76,28 @@
 		//		addPinal(2, "小猪2号", '工作中', '穿戴中');
 		//		addPinal(2, "小猪2号", '工作中', '穿戴中');
 	</script>
-
+	<script src="../../js/jquery.cookie.js"></script>
 	<script>
 		$.ajax({
 			type: "get",
 			url: "http://animal.actim.top:8092/data/product/getbyuid/1",
 			async: true,
-			datatype: "json", 
+			datatype: "json",
+			beforeSend: function(xhr) {
+				xhr.withCredentials = true;
+			},
+			data: {
+				"LOGSESSION": $.cookie("LOGSESSION")
+			},
+			crossDomain: true,
 			success: function(data) {
 				try {
 					data = JSON.parse(data); // 将json转换为对象
 				} catch(e) {
 					//TODO handle the exception	 
 				}
-				$(data).each(function(){
-					addPinal(this.productId, this.productName, this.working, '穿戴中'); 
+				$(data).each(function() {
+					addPinal(this.productId, this.productName, this.working, '穿戴中');
 				});
 			},
 			error: function(e) {
@@ -98,6 +105,8 @@
 				alert("读取失败");
 			}
 		});
+
+		console.log();
 	</script>
 
 </html>
