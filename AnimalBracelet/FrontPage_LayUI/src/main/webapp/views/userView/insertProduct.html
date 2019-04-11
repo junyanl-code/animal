@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>设置我的密码</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../assets/css/layui.css" media="all">
+  <link rel="stylesheet" href="../assets/css/admin.css" media="all">
+</head>
+<body>
+  <br/><iframe id="outWindow" name="outWindow" style="display:none;"></iframe>
+  <div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+          <div class="layui-card-header">添加设备</div>
+          <div class="layui-card-body" pad15>
+            
+            <form class="layui-form" lay-filter="" type="post" action="" target="outWindow" id="insform">
+              <div class="layui-form-item">
+                <label class="layui-form-label">设备ID</label>
+                <div class="layui-input-inline">
+                  <input type="value" name="productId" lay-verify="required" lay-verType="tips" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">设备名称</label>
+                <div class="layui-input-inline">
+                  <input type="value" name="productName" lay-verify="pass" lay-verType="tips" autocomplete="off" id="LAY_name" class="layui-input">
+                </div>
+           
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">备注</label>
+                <div class="layui-input-inline">
+                  <input type="value" name="beizhu" lay-verify="repass" lay-verType="tips" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <div class="layui-input-block">
+                  <input type="submit" class="layui-btn" lay-submit lay-filter="setmypass" value="确认添加"></input>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
+<script src="../js/jquery-1.4.2.js"></script>
+<!-- script src="../conf/DomainConfig.js"></script -->
+<script>
+  $("form").submit(function () {
+    this.action = "http://animal.actim.top:8092/data/ins/product/{productId}/{productName}";
+
+    alert("这个界面还不好使"); return;
+
+    $.ajax({
+      type: "post",
+      url: this.action,
+      data: $('#insform').serialize(),
+    }).success(function(result) {
+      alert(result.msg);
+    }).fail(function(err){
+      alert(err);
+    });
+
+    event.preventDefault();
+  });
+</script>

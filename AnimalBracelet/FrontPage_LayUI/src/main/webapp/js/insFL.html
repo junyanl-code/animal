@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="num">0</div>
+	</body>
+
+</html>
+
+<script src="jquery-2.1.4.min.js"></script>
+<script>
+	Date.prototype.format = function(format) {
+		var o = {
+			"M+": this.getMonth() + 1, //month
+			"d+": this.getDate(), //day
+			"h+": this.getHours(), //hour
+			"m+": this.getMinutes(), //minute
+			"s+": this.getSeconds(), //second
+			"q+": Math.floor((this.getMonth() + 3) / 3), //quarter
+			"S": this.getMilliseconds() //millisecond
+		}
+		if(/(y+)/.test(format)) format = format.replace(RegExp.$1,
+			(this.getFullYear() + "").substr(4 - RegExp.$1.length));
+		for(var k in o)
+			if(new RegExp("(" + k + ")").test(format))
+				format = format.replace(RegExp.$1,
+					RegExp.$1.length == 1 ? o[k] :
+					("00" + o[k]).substr(("" + o[k]).length));
+		return format;
+	}
+</script>
+<script>
+	var n = 0;
+	function ins() {
+		var time = new Date().format("yyyy/MM/dd hh:mm:ss");
+		$.post("http://202.118.163.18/data/setter/view_temperature_data/1", {
+			time: time,
+			data: Math.random() + 20 + new Date().getHours()
+		}).success();
+		$.post("http://202.118.163.18/data/setter/view_humidity_data/1", {
+			time: time,
+			data: Math.random()*2 - (new Date().getHours()) + 35
+		}).success();
+		$("#num").text(n++);
+	}
+	
+	setInterval(ins, 20000);
+</script>

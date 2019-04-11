@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- 项目信息 -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>neau.cekong</groupId>
+		<artifactId>AnimalBracelet</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>FrontPage_LayUI</artifactId>
+	<packaging>war</packaging>
+	<name>FrontPage_LayUI Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<!-- 依赖库 -->
+	<dependencies>
+	</dependencies>
+
+	<!-- 构建 -->
+	<build>
+		<finalName>FrontPage_LayUI</finalName>
+		<!-- 插件 -->
+		<plugins>
+			<!-- 配置 tomcat 插件 -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+
+				<configuration>
+					<!-- 控制tomcat -->
+					<port>8091</port>
+					<path>/</path>
+					<!-- 热部署 -->
+					<username>neau</username>
+					<password>neau</password>
+					<url>http://39.107.250.149:8091/manager/text</url>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
