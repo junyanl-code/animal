@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退出登录</title>
+</head>
+<body>
+<a href="login1.html"> 正在退出，请稍等 </a>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+    $.post("http://animal.actim.top:8092/data/login/out", {
+        "LOGSESSION": $.cookie("LOGSESSION")
+    }, function () {
+        location.href = "login1.html";
+    }, "json").error(function () {
+        alert("err");
+        location.href = "login1.html";
+    });
+    $("a").text("已退出，请重新登录");
+</script>
