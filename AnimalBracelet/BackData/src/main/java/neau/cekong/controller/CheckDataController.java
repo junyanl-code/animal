@@ -26,21 +26,21 @@ public class CheckDataController {
 	@RequestMapping("bushu")
 	@ResponseBody
 	public TopBushu defaultWay(Long product_id, int limit) {
-		Logger.getLogger(this.getClass()).info("Ç°¼¸Ìõ bushu ²éÑ¯");
+		Logger.getLogger(this.getClass()).info("å‰å‡ æ¡ bushu æŸ¥è¯¢");
 		return getTopBushuByDidServiceImpl.getTopBushuByDid(limit, product_id);
 	}
 
 	@RequestMapping("zishi")
 	@ResponseBody
 	public TopZishi zishi(Long product_id, int limit) {
-		Logger.getLogger(this.getClass()).info("Ç°¼¸Ìõ zishi ²éÑ¯");
+		Logger.getLogger(this.getClass()).info("å‰å‡ æ¡ zishi æŸ¥è¯¢");
 		return getTopZishiByDidServiceImpl.getTopZishiByDid(limit, product_id);
 	}
 	
 	@RequestMapping("wendu")
 	@ResponseBody
 	public TopWendu wendu(Long product_id, int limit) {
-		Logger.getLogger(this.getClass()).info("Ç°¼¸Ìõ wendu ²éÑ¯");
+		Logger.getLogger(this.getClass()).info("å‰å‡ æ¡ wendu æŸ¥è¯¢");
 		return getTopWenduByDidServiceImpl.getTopWenduByDidService(limit, product_id);
 	}
 

@@ -55,19 +55,19 @@ public class UserCheck implements Filter {
 
 		try {
 			String log = (String) req.getParameter("LOGSESSION");
-			System.out.println("取出logsession");
+			System.out.println("鍙栧嚭logsession");
 			if (log != null)
 				System.out.println(log);
 			TableUser tu = (TableUser) context.getAttribute(log);
 			if (tu != null) {
-				System.out.println("有啦");
-				tl.set(tu);//线程绑定
+				System.out.println("鏈夊暒");
+				tl.set(tu);//绾跨▼缁戝畾
 			} else {
-				System.out.println("不存在啊");
+				System.out.println("涓嶅瓨鍦ㄥ晩");
 				return;
 			}
 		} catch (Exception e) {
-			System.out.println("不存在啊");
+			System.out.println("涓嶅瓨鍦ㄥ晩");
 			return;
 		}
 		chain.doFilter(request, response);

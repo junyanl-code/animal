@@ -27,10 +27,10 @@ public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 			tu.setPassword(password);
 			tu.setUserName(name);
 			tableUserMapper.insertSelective(tu);
-			result.put("msg", "×¢²á³É¹¦");
+			result.put("msg", "æ³¨å†ŒæˆåŠŸ");
 			result.put("stat", "0");
 		} else {
-			result.put("msg", "ÓÃ»§ÒÑ´æÔÚ");
+			result.put("msg", "ç”¨æˆ·å·²å­˜åœ¨");
 			result.put("stat", "1");
 		}
 
@@ -43,18 +43,18 @@ public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
 		
 		Map<String, String> result = new HashMap<String, String>();
 		if (tu == null) {
-			result.put("msg", "ÓÃ»§Ãû²»´æÔÚ");
+			result.put("msg", "ç”¨æˆ·åä¸å­˜åœ¨");
 			result.put("stat", "1");
 		} else {
 			if (tu.getPassword().equals(password)) {
 				tu.setPassword(null);
 				session.setAttribute("loginedUser", tu);
 				context.setAttribute(session.getId(), tu);
-				result.put("msg", "µÇÂ½³É¹¦");
+				result.put("msg", "ç™»é™†æˆåŠŸ");
 				result.put("stat", "0");
 				result.put("LOGSESSION", session.getId());
 			}else{
-				result.put("msg", "ÃÜÂë´íÎó");
+				result.put("msg", "å¯†ç é”™è¯¯");
 				result.put("stat", "2");
 			}
 			System.out.println(tu.getUserId());
