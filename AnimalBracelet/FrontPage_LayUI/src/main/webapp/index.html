@@ -24,10 +24,10 @@
 
 				<ul class="layui-nav layui-layout-right">
 					<li class="layui-nav-item">
-						<a href="javascript:;">测试账号1</a>
+						<a href="http://animal.actim.top:8091/selfront.html" class="userNameBar">未登录</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="http://www.animalogin.watery.top/">退出</a>
+								<a href="http://animal.actim.top:8092/data/loginPage/logOut.html">退出</a>
 							</dd>
 						</dl>
 					</li>
@@ -109,6 +109,8 @@
 
 </html>
 <script src="js/jquery.cookie.js"></script>
+<script src="js/LoginFor.js"></script>
+<script> loginFor.getUserInfo();</script> 
 <script>
 	if(location.hash == null || location.hash == "") {
 		alert("您未选择设备");

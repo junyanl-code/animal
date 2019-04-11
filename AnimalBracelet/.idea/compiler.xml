@@ -10,10 +10,5 @@
         <module name="FrontPage_LayUI" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="AnimalBracelet" target="1.8" />
-      <module name="BackData" target="1.8" />
-      <module name="FrontPage_LayUI" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
