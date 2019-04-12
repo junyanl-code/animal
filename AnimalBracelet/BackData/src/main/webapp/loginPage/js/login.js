@@ -6,6 +6,9 @@
 
 /*  登陆*/
 /*var redirectUrl = "${redirectUrl}";*/
+var indexUrl = "http://animal.actim.top:8091/selfront.html";
+var redirectUrl = getQueryVariable("redirectUrl");
+
 var LOGIN = {
 		checkInput:function() {
 			if ($("#loginname").val() == "") {
@@ -43,14 +46,20 @@ var LOGIN = {
 			});
 		},*/
 		doLogin:function() {
-			$.post("/user/login", $("#formlogin").serialize(),function(data){
-				if (data.status == 200) {
-					//alert("登录成功！");
-					if (redirectUrl == "") {
-						location.href = indexUrl;
-						//"http://ck.neau.edu.cn";
+			$.post("/data/login/" + $("#loginname").val() + "/" + $("#nloginpwd").val(),function(data){
+				if (data.stat == 0) {
+					alert(data.msg);
+					// if (redirectUrl == "") {
+					// 	location.href = indexUrl;
+					// 	//"http://ck.neau.edu.cn";
+					// } else {
+					// 	location.href = redirectUrl;
+					// }
+					$.cookie('LOGSESSION', data.LOGSESSION);
+					if (redirectUrl == "" || !redirectUrl) {
+						location.href = "http://animal.actim.top:8091/test.html?LOGSESSION=" + data.LOGSESSION;
 					} else {
-						location.href = redirectUrl;
+						location.href = "http://animal.actim.top:8091/test.html?LOGSESSION=" + data.LOGSESSION + "&redirectUrl=" + redirectUrl;
 					}
 				} else {
 					alert("登录失败，原因是：" + data.msg);

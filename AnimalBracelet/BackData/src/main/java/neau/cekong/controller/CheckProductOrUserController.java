@@ -57,16 +57,20 @@ public class CheckProductOrUserController {
         return registerAndLoginService.login(userName, password, session, context);
     }
 
-    @RequestMapping("login/test/t/{log}")
+    @RequestMapping("login/check")
     @ResponseBody
-    public Map<String, String> loginTest(HttpSession session, HttpServletResponse resp, HttpServletRequest req,
-                                         @PathVariable String log) {
+    public Map<String, String> loginTest(String LOGSESSION) {
+        TableUser tu = (TableUser)servletContext.getAttribute(LOGSESSION);
+        HashMap<String, String> result = new HashMap<>();
 
-        ServletContext context = session.getServletContext();
-        TableUser us = (TableUser) context.getAttribute(log);
-        String userName = us.getUserName();
-        String password = us.getPassword();
-        return registerAndLoginService.login(userName, password, session, context);
+        if(tu!=null){
+            result.put("stat", "200");
+            result.put("userName", tu.getUserName());
+        }else{
+            result.put("stat", "500");
+        }
+
+        return result;
     }
 
     @RequestMapping("ins/product/{productId}/{productName}")

@@ -7,13 +7,13 @@ public class TableZishi {
 
     private Date time;
 
-    private Double zhan;
+    private Double zhan = 0.0;
 
     private Long productId;
 
-    private Double ce;
+    private Double ce = 0.0;
 
-    private Double tang;
+    private Double tang = 0.0;
 
     public Long getId() {
         return id;

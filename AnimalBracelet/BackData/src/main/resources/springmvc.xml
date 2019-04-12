@@ -17,6 +17,7 @@
     <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
     <mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
     <mvc:resources location="/files/" mapping="/files/**"></mvc:resources>
+    <mvc:resources location="/loginPage/" mapping="/loginPage/**"></mvc:resources>
     <!-- 视图解析器 
     <bean id="viewResolver"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
