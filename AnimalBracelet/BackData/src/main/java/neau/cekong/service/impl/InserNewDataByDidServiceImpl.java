@@ -27,6 +27,7 @@ public class InserNewDataByDidServiceImpl implements InsertNewDataByDidService, 
 
     @Override
     public Object insertInto(TableBushu record) {
+        record.setId(null);// 我也不知道为啥 反正这样就好使了 66？？
         // 获取最新数据
         List<TableBushu> topList = tableBushuMapper.getTopData(1, record.getProductId());
         TableBushu topData = null;

@@ -1,5 +1,6 @@
 package neau.cekong.service.impl;
 
+import jdk.nashorn.internal.ir.ContinueNode;
 import neau.cekong.pojo.TableBushu;
 import neau.cekong.pojo.TableWendu;
 import neau.cekong.pojo.TableZishi;
@@ -45,10 +46,13 @@ public class InsertMulDataServiceImpl implements InsertMulDataService {
         posture.setTime(date);
 
         // 将json字符串传化为Map列表
+        dataArr = json.selfToJson(dataArr);
         List<Map<String, String>> dataList = json.transToList(dataArr);
 
         // 遍历List
         for (Map<String, String> data : dataList) {
+
+            if (data == null) continue;
 
             // 设置产品id
             Long productId = Long.parseLong(data.get("productId"));
