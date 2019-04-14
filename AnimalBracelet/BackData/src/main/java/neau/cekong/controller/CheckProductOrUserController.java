@@ -78,10 +78,12 @@ public class CheckProductOrUserController {
     public Map<String, String> insProduct(@PathVariable Long productId, @PathVariable String productName) {
 
         TableProduct tableProduct = new TableProduct();
+        tableProduct.setId(null);
         tableProduct.setProductId(productId);
         tableProduct.setProductName(productName);
+        tableProduct.setWorking(false);
         try {
-            tableProduct.setUserId((Long) servletContext.getAttribute(httpServletrequest.getParameter("LOGSESSION")));
+            tableProduct.setUserId(((TableUser) servletContext.getAttribute(httpServletrequest.getParameter("LOGSESSION"))).getUserId());
         } catch (Exception e) {
             e.printStackTrace();
             Map<String, String> map = new HashMap<>();

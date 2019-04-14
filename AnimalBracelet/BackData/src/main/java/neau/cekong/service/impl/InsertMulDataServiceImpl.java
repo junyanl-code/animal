@@ -29,7 +29,7 @@ public class InsertMulDataServiceImpl implements InsertMulDataService {
 
     @Override
     // 参数示例： [{'productId':'01','step':'7000','temp':'31.5','posture':'1'},{'productId':'02','step':'8000','temp':'37.5','posture':'2'}]
-    // 5段特殊字符 需要URLencode
+    // 自定义格式：(pid-01/step-7000/temp-31.5/pos-1)(pid-02/step-8000/temp-37.5/pos-2)
     // %5b%7b%27productId%27%3a%2701%27%2c%27step%27%3a%277000%27%2c%27temp%27%3a%2731.5%27%2c%27posture%27%3a%271%27%7d%2c%7b%27productId%27%3a%2702%27%2c%27step%27%3a%278000%27%2c%27temp%27%3a%2737.5%27%2c%27posture%27%3a%272%27%7d%5d
     public Map<String, String> insData(String dataArr) {
         // 各数据缓存对象

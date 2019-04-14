@@ -42,7 +42,7 @@ public class UserCheck implements Filter {
 		if (flag) {
 			TableUser tu = new TableUser();
 			tu.setUserName("lyp");
-			tu.setUserId(2L);
+			tu.setUserId(5L);
 			context.setAttribute("555049DEBFB0EF776B7107DBDEA2D215", tu);
 			flag = false;
 		}
