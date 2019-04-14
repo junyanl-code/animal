@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="380151d2-6be0-47db-a5c1-846d60f6541b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckProductOrUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckProductOrUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/UserCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/UserCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/selfront.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/selfront.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/BackData/target/" />
@@ -377,7 +372,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555209731823" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555209777339" />
     <property name="last_opened_file_path" value="E:/a/MyFilesNoCh/IDEAprojects/FarmlandMonitor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -529,7 +524,7 @@
       <workItem from="1555041715529" duration="651000" />
       <workItem from="1555042434188" duration="13027000" />
       <workItem from="1555080301570" duration="8780000" />
-      <workItem from="1555152076965" duration="9450000" />
+      <workItem from="1555152076965" duration="9783000" />
     </task>
     <task id="LOCAL-00001" summary="修复前端页">
       <created>1554988210267</created>
@@ -573,11 +568,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555156504486</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="批量数据插入&#10;修改了传输格式&#10;例:&#10;[{'productId':'01','step':'7000','temp':'31.5','posture':'1'},{'productId':'02','step':'8000','temp':'37.5','posture':'2'}]&#10;--------------------------------&#10;自定义格式：(pid-01/step-7000/temp-31.5/pos-1)(pid-02/step-8000/temp-37.5/pos-2)&#10;-----------------------------">
+      <created>1555209757901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555209757901</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41709000" />
+    <option name="totallyTimeSpent" value="42042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
