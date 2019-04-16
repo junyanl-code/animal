@@ -16,7 +16,7 @@ public class InsertProductServiceImpl implements InsertProductService {
     TableProductMapper tableProductMapper;
 
     @Override
-    public Map<String, String> ins(TableProduct tableProduct) {
+    public Map<String, String> ins(TableProduct tableProduct) { //
         try {
             int result = tableProductMapper.insert(tableProduct);
             if (result == 0) throw new Exception("插入失败");

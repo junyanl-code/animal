@@ -24,13 +24,13 @@
               <div class="layui-form-item">
                 <label class="layui-form-label">设备ID</label>
                 <div class="layui-input-inline">
-                  <input type="value" name="productId" lay-verify="required" lay-verType="tips" class="layui-input">
+                  <input type="value" name="productId" id="productId" lay-verify="required" lay-verType="tips" class="layui-input">
                 </div>
               </div>
               <div class="layui-form-item">
                 <label class="layui-form-label">设备名称</label>
                 <div class="layui-input-inline">
-                  <input type="value" name="productName" lay-verify="pass" lay-verType="tips" autocomplete="off" id="LAY_name" class="layui-input">
+                  <input type="value" name="productName" id="productName" lay-verify="pass" lay-verType="tips" autocomplete="off" id="LAY_name" class="layui-input">
                 </div>
            
               </div>
@@ -56,18 +56,19 @@
   
 </body>
 </html>
-<script src="../js/jquery-1.4.2.js"></script>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/jquery.cookie.js"></script>
 <!-- script src="../conf/DomainConfig.js"></script -->
 <script>
   $("form").submit(function () {
-    this.action = "http://animal.actim.top:8092/data/ins/product/{productId}/{productName}";
-
-    alert("这个界面还不好使"); return;
+    this.action = "http://animal.actim.top:8092/data/ins/product/" + $("#productId").val() + "/" + encodeURIComponent($("#productName").val());
 
     $.ajax({
       type: "post",
       url: this.action,
-      data: $('#insform').serialize(),
+      data: {
+        LOGSESSION : $.cookie("LOGSESSION"),
+      },
     }).success(function(result) {
       alert(result.msg);
     }).fail(function(err){
