@@ -28,6 +28,7 @@ public class InsertProductServiceImpl implements InsertProductService {
             e.printStackTrace();
         }
         Map<String, String> rm = new HashMap<>();
+        rm.put("msg", "写入失败，可能为重复id");
         rm.put("stat", "ERR");
         return rm;
     }

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="380151d2-6be0-47db-a5c1-846d60f6541b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/posture.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/posture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/BackData/target/" />
@@ -20,27 +17,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/pojo/TableProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/utils/JsonTranstor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" column="81" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/UserCheck.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="589">
@@ -49,11 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
               <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/InsertMulDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -79,8 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="417">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BackData/src/main/resources/db.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -106,8 +100,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+            <state relative-caret-position="-532">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,8 +143,8 @@
         <option value="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/UserCheck.java" />
         <option value="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/CheckProductOrUserController.java" />
         <option value="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html" />
+        <option value="$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -212,9 +209,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AnimalBracelet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="BackData" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.FrontPage_LayUI [tomcat7:redeploy]">
+  <component name="RunManager" selected="Maven.BackData [tomcat7:redeploy].">
     <configuration name="JsonTranstor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="neau.cekong.utils.JsonTranstor" />
       <module name="BackData" />
@@ -319,7 +344,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="BackData [tomcat7:redeploy]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+    <configuration name="BackData [tomcat7:redeploy]." type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -372,8 +397,8 @@
     <list>
       <item itemvalue="Application.Transtor" />
       <item itemvalue="Application.JsonTranstor" />
-      <item itemvalue="Maven.BackData [tomcat7:redeploy]" />
       <item itemvalue="Maven.FrontPage_LayUI [tomcat7:redeploy]" />
+      <item itemvalue="Maven.BackData [tomcat7:redeploy]." />
       <item itemvalue="Maven.AnimalBracelet [tomcat7:redeploy]" />
       <item itemvalue="Maven.BackData [clean,tomcat7:run]" />
     </list>
@@ -399,7 +424,8 @@
       <workItem from="1555042434188" duration="13027000" />
       <workItem from="1555080301570" duration="8780000" />
       <workItem from="1555152076965" duration="13067000" />
-      <workItem from="1555424162453" duration="1100000" />
+      <workItem from="1555424162453" duration="1257000" />
+      <workItem from="1555428857759" duration="1109000" />
     </task>
     <task id="LOCAL-00001" summary="修复前端页">
       <created>1554988210267</created>
@@ -457,17 +483,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555210087425</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="去掉了躺卧曲线">
+      <created>1555426279681</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555426279681</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46426000" />
+    <option name="totallyTimeSpent" value="47692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27010724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -511,7 +544,8 @@
     <MESSAGE value="批量数据插入&#10;存在问题：json格式由于逗号原因无法通过get方式直接发送 需要URLencode&#10;例:&#10;[{'productId':'01','step':'7000','temp':'31.5','posture':'1'},{'productId':'02','step':'8000','temp':'37.5','posture':'2'}]&#10;--------------------------------&#10;%5b%7b%27productId%27%3a%2701%27%2c%27step%27%3a%277000%27%2c%27temp%27%3a%2731.5%27%2c%27posture%27%3a%271%27%7d%2c%7b%27productId%27%3a%2702%27%2c%27step%27%3a%278000%27%2c%27temp%27%3a%2737.5%27%2c%27posture%27%3a%272%27%7d%5d&#10;-----------------------------&#10;修复登录页" />
     <MESSAGE value="批量数据插入&#10;修改了传输格式&#10;例:&#10;[{'productId':'01','step':'7000','temp':'31.5','posture':'1'},{'productId':'02','step':'8000','temp':'37.5','posture':'2'}]&#10;--------------------------------&#10;自定义格式：(pid-01/step-7000/temp-31.5/pos-1)(pid-02/step-8000/temp-37.5/pos-2)&#10;-----------------------------" />
     <MESSAGE value="修复了设备插入接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了设备插入接口" />
+    <MESSAGE value="去掉了躺卧曲线" />
+    <option name="LAST_COMMIT_MESSAGE" value="去掉了躺卧曲线" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BackData/src/main/resources/springmvc.xml">
@@ -635,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/InsertMulDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/controller/InserDataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -704,17 +731,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/mapper/TableProductMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/InsertMulDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-532">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,17 +769,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertMulDataServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/BackData/src/main/java/neau/cekong/service/impl/InsertProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="417">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontPage_LayUI/src/main/webapp/views/userView/insertProduct.html">
+    <entry file="file://$PROJECT_DIR$/BackData/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        <state relative-caret-position="57">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
